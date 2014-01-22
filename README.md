@@ -1,4 +1,4 @@
 jsbrot
 ======
 
-javascript
+javascript implementation of Mandelbrot set
