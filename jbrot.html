@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>
+      "JavaScript Mandelbrot"
+    </title>
+    <script language=Javascript src="./jbrot.js" > 
+        //document.write("<H3>Hello Mandelbrot!</H3>");
+    </script>
+  </head>
+  <body onload=start() bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
+    <table border="1px">
+        <tr>
+            <td rowspan=6> <canvas id="canvas1" width="500" , height="500" , style="border:1px solid #000000 " ></canvas><br/> </td>
+            <td align=center><p id='fx'>&nbsp;_&nbsp;_&nbsp;</p> </td>
+            <td align=center><p id="fy">&nbsp;_&nbsp;_&nbsp;</p> </td>
+            <td align=center ><button onclick="mandelbrot('canvas1', _x, _y, 3.25 , C_array, max)">Start</button> <br/><br/> </td>
+        </tr> 
+        <tr>
+            <td align=center> <p id='gx'>&nbsp;_&nbsp;_&nbsp; </p> </td>
+            <td align=center> <p id="gy">&nbsp;_&nbsp;_&nbsp; </p> </td>
+            <td align=center> <p id="gr">&nbsp;_&nbsp;_&nbsp; </p> </td>
+        </tr>
+        <tr>    <td colspan=2>  <form >
+                                        <label for=fader>RED</label>
+                                        <input type=range  min=0,max='max',step=1 />
+                                </form>
+                            </td> <td> red </td>
+        </tr> 
+        <tr>    <td colspan=3> <form >
+                                        <label for=fader>GREEN</label>
+                                        <input type=range  min=0, max='max',step=1 />
+                               </form>
+                </td> 
+        </tr> 
+        <tr>    <td colspan=3> <form >
+                                        <label for=fader>BLUE</label>
+                                        <input type=range  min=0, max='max',step=1 />
+                               </form>
+                </td> 
+        </tr>
+        <tr>    <td colspan=3> <form >
+                                         <label for=fader>MAX</label>
+                                         <input type=range  min=0, max='max',step=1 />
+                               </form>
+                </td> 
+       </tr> 
+    </table>
+  </body>
+</html>
