@@ -29,7 +29,7 @@
             }
 
             function mandelbrot( C_ID, cx, cy, radius, RGB_array, max){
-                alert( "mandelbrot "+ cx +","+ cy +","+ radius +" ["+ RGB_array +"], "+ max );
+                alert( "mandelbrot "+ cx +","+ cy +","+ radius +", ["+ RGB_array +"], "+ max );
                 element = document.getElementById( C_ID );
                 context = element.getContext("2d");
                 width  = element.width;
