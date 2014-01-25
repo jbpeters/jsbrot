@@ -4,54 +4,54 @@
     <body onload=start() >
         <table border="1px" >
             <tr>
-                <td rowspan=2 > 
-
+                <td rowspan=2 >
                     <canvas id=canvas1 width="500", height="500", style="border:0px solid #FF0000 ">
                     </canvas>
                 </td>
-
-                <td><p id=i > &nbsp;  </td>
-                <td><p id=j > &nbsp;  </td>
-        
+                <td><center><p id=i > &nbsp; </p></center></td>
+                <td><center><p id=j > &nbsp; </p></center></td>
             </tr>
             <tr>
-
-                <td> <p id = x > &nbsp; </p>  </td>
-                <td> <p id = y > &nbsp; </p>  </td>
-        
-            </tr>
-            
-
+                <td><center><p id = x > &nbsp; </p></center> </td>
+                <td><center><p id = y > &nbsp; </p></center></td>   
+            </tr>         
         </table>
     
-        <script >
+        <script>
+            var width= 500;
+            var height= 500;
+            var x_off= -13;
+            var y_off= 12;
             cx=0;
             cy=0;
 
             radius=5;
             x0= cx-radius ;
             y0= cy-radius ;
-            dx=2*radius/500 ;
-            dy=2*radius/500 ;
+            dx=2*radius/width ;
+            dy=2*radius/height ;
             alert(x0);
 
-        function start() {
-            var canvas = document.getElementById('canvas1');
-            canvas.addEventListener( "mousemove" , doMouseMove,false );
-            canvas.addEventListener( "mouseDown" , doMouseDown,false );
-        }
-        function doMouseMove(event){
-            var canvas_x=-13+event.layerX ;
-            var canvas_y=500+12-event.layerY;
-            document.getElementById("i").innerHTML = canvas_x;
-            document.getElementById("j").innerHTML = canvas_y;
-            document.getElementById("x").innerHTML = x0+canvas_x*dx ;
-            document.getElementById("y").innerHTML = y0+canvas_y*dy ;
-        }
-        function doMouseDown(event){
-        }
+            function init( W,H, xo,yo,cx,cy,r,  ){
+        
+            }    
 
-
+            function start() {
+                var canvas = document.getElementById('canvas1');
+                canvas.addEventListener( "mousemove" , doMouseMove,false );
+                canvas.addEventListener( "mousedown" , doMouseDown,false );
+            }
+            function doMouseMove(event){
+                var canvas_x=       x_off+event.layerX;
+                var canvas_y=height+y_off-event.layerY;
+                document.getElementById("i").innerHTML = canvas_x.toFixed(0);
+                document.getElementById("j").innerHTML = canvas_y.toFixed(0);;
+                document.getElementById("x").innerHTML = (x0+canvas_x*dx).toFixed(5) ;
+                document.getElementById("y").innerHTML = (y0+canvas_y*dy).toFixed(5) ;
+            }
+            function doMouseDown(event){
+            
+            }       
         </script>
         
     </body>
