@@ -1,5 +1,5 @@
       
-            var C_array = [142,37,85];
+            var C_array = [500,600,700];
             var max =4096;
             var radius=3.25 ;
             var _x =-0.75;  // -0.7520;
@@ -81,16 +81,16 @@
                 canvas_x = event.layerX;
                 canvas_y = event.layerY;
                 document.getElementById("fx").innerHTML=(canvas_x-fudge_x);
-                document.getElementById("fy").innerHTML=((height-canvas_y)-fudge_y);
+                document.getElementById("fy").innerHTML=((height-canvas_y)+fudge_y);
                // alert("mousemove:zx0, zy0 = "+zx0+","+zy0);
                 canvas_cx=zx0+dx*(canvas_x-fudge_x);
                 canvas_cy=zy0+dy*((height-canvas_y)-fudge_y);
                 document.getElementById("gx").innerHTML=zx0+dx*(canvas_x-fudge_x);
-                document.getElementById("gy").innerHTML=zy0+dy*((height-canvas_y)-fudge_y);
+                document.getElementById("gy").innerHTML=zy0+dy*((height-canvas_y)+fudge_y);
                 document.getElementById("gr").innerHTML=radius;
             }
 
             function doMouseDown(event){
-                radius *= .333 ;
-                mandelbrot( "canvas1" , canvas_cx , canvas_cy , radius , C_array , max );
+                radius *= .6 ;
+                mandelbrot( "canvas1" , canvas_cx ,canvas_cy , radius , C_array , max );
             }
