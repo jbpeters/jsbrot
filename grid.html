@@ -32,9 +32,6 @@
             dy=2*radius/height ;
             alert(x0);
 
-            function init( W,H, xo,yo,cx,cy,r,  ){
-        
-            }    
 
             function start() {
                 var canvas = document.getElementById('canvas1');
@@ -45,7 +42,7 @@
                 var canvas_x=       x_off+event.layerX;
                 var canvas_y=height+y_off-event.layerY;
                 document.getElementById("i").innerHTML = canvas_x.toFixed(0);
-                document.getElementById("j").innerHTML = canvas_y.toFixed(0);;
+                document.getElementById("j").innerHTML = canvas_y.toFixed(0);
                 document.getElementById("x").innerHTML = (x0+canvas_x*dx).toFixed(5) ;
                 document.getElementById("y").innerHTML = (y0+canvas_y*dy).toFixed(5) ;
             }
